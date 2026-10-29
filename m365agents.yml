@@ -34,7 +34,8 @@ provision:
       authorizationUrl: https://login.microsoftonline.com/${{ENTRA_TENANT_ID}}/oauth2/v2.0/authorize
       tokenUrl: https://login.microsoftonline.com/${{ENTRA_TENANT_ID}}/oauth2/v2.0/token
       refreshUrl: https://login.microsoftonline.com/${{ENTRA_TENANT_ID}}/oauth2/v2.0/token
-      scope: api://${{ENTRA_CLIENT_ID}}/access_as_user offline_access
+      # atk splits scopes on commas
+      scope: api://${{ENTRA_CLIENT_ID}}/access_as_user,offline_access
       isPKCEEnabled: true
       # A registration bound to one app makes every MCP tool call return 404.
       applicableToApps: AnyApp

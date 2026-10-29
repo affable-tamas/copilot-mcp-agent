@@ -32,6 +32,10 @@
                             "inputSchema": {
                                 "type": "object",
                                 "properties": {}
+                            },
+                            "annotations": {
+                                "readOnlyHint": true,
+                                "openWorldHint": false
                             }
                         },
                         {
@@ -53,6 +57,10 @@
                                         ]
                                     }
                                 }
+                            },
+                            "annotations": {
+                                "readOnlyHint": true,
+                                "openWorldHint": false
                             }
                         }
                     ]
