@@ -1,0 +1,19 @@
+{
+  "inputs": [
+    {
+      "type": "promptString",
+      "id": "mcp-dev-token",
+      "description": "Dev token: run `npm run -s token` in copilot-mcp-spike",
+      "password": true
+    }
+  ],
+  "servers": {
+    "copilot-mcp-spike-local": {
+      "type": "http",
+      "url": "http://localhost:3000/mcp",
+      "headers": {
+        "Authorization": "Bearer ${input:mcp-dev-token}"
+      }
+    }
+  }
+}

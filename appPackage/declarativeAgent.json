@@ -1,0 +1,23 @@
+{
+    "$schema": "https://developer.microsoft.com/json-schemas/copilot/declarative-agent/v1.7/schema.json",
+    "version": "v1.7",
+    "name": "Copilot MCP spike${{APP_NAME_SUFFIX}}",
+    "description": "Calls the copilot-mcp-spike MCP server, which identifies the signed-in Microsoft 365 user.",
+    "instructions": "$[file('instruction.txt')]",
+    "conversation_starters": [
+        {
+            "title": "Who am I?",
+            "text": "Who am I signed in as, and which client app am I calling through?"
+        },
+        {
+            "title": "Greet me",
+            "text": "Greet me in Hungarian."
+        }
+    ],
+    "actions": [
+        {
+            "id": "copilotMcpSpike",
+            "file": "ai-plugin.json"
+        }
+    ]
+}
